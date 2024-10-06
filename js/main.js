@@ -8,14 +8,16 @@ const apiKey = "kZUnG24w9UPhAa1fxR6CRQfPGoylZ80P";
 
 //Funcion fetch para conectar la api de giphy y la busqueda de gifs 
 const llamada = (ak, kw) => {
-    return fetch(`https://api.giphy.com/v1/gifs/search?
-        api_key=${ak}
-        &q=${kw}
-        &limit=9
-        &offset=0
-        &rating=g
-        &lang=en
-        &bundle=messaging_non_clips`);
+    return fetch(`
+https://api.giphy.com/v1/gifs/search
+?api_key=${ak}
+&q=${kw}
+&limit=9
+&offset=0
+&rating=g
+&lang=en
+&bundle=messaging_non_clips
+`);
 }
 
 //Llamada a la api, funcionalidad con promesas....
